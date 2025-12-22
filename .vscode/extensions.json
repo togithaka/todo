@@ -2,6 +2,5 @@
     "recommendations": [
         "esbenp.prettier-vscode",
         "formulahendry.auto-rename-tag",
-        "PKief.material-icon-theme"
     ]
 }
