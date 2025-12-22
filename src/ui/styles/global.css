@@ -86,4 +86,6 @@ html[data-theme='dark'] {
 
 body {
   background-color: var(--color-background);
+  min-height: 100dvh;
+  min-width: 100dvw;
 }
