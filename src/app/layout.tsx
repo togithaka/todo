@@ -6,7 +6,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html
+      data-theme='system'
+      lang='en'
+    >
       <body>{children}</body>
     </html>
   );
