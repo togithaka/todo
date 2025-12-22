@@ -11,7 +11,9 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
+      "@ui/components/layout": ["./src/exports/ui/components/layout"],
       "@ui/components/page": ["./src/exports/ui/components/page"],
+      "@ui/styles/layout": ["./src/exports/ui/styles/layout"],
       "@ui/styles/page": ["./src/exports/ui/styles/page"]
     },
     "plugins": [
