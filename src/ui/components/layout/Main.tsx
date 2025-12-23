@@ -1,5 +1,9 @@
 import { MainStyles } from '@ui/styles/layout';
 
-export default function Main() {
-  return <main className={MainStyles.Main}></main>;
+interface Props {
+  className: string;
+}
+
+export default function Main({ className }: Props) {
+  return <main className={[MainStyles.Main, className].join(' ')}></main>;
 }
