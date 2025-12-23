@@ -13,6 +13,7 @@
       "@/*": ["./src/*"],
       "@library/contexts": ["./src/exports/library/contexts"],
       "@library/hooks": ["./src/exports/library/hooks"],
+      "@library/providers": ["./src/exports/library/providers"],
       "@ui/components/layout": ["./src/exports/ui/components/layout"],
       "@ui/components/page": ["./src/exports/ui/components/page"],
       "@ui/styles/layout": ["./src/exports/ui/styles/layout"],
