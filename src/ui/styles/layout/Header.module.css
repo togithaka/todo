@@ -7,7 +7,6 @@
   justify-content: space-between;
   gap: 28px;
   z-index: 999;
-  height: 56px;
 }
 
 .Header::after {
@@ -25,10 +24,8 @@
 }
 
 .Page {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
 .Dashboard::after {
@@ -44,7 +41,6 @@
 
   .Page {
     padding-inline: 16px;
-    width: calc(100% - 32px);
   }
 }
 
@@ -62,7 +58,6 @@
 
   .Page {
     padding-inline: 28px;
-    width: calc(100% - 56px);
   }
 }
 
@@ -74,7 +69,6 @@
 
   .Page {
     padding-inline: 56px;
-    width: calc(100% - 112px);
   }
 }
 
@@ -86,6 +80,5 @@
 
   .Page {
     padding-inline: calc(128px + (100vw - 2304px) / 2);
-    width: calc(100% - calc(128px + (100vw - 2304px) / 2) * 2);
   }
 }
