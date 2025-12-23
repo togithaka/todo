@@ -11,11 +11,12 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
+      "@library/contexts": ["./src/exports/library/contexts"],
+      "@library/hooks": ["./src/exports/library/hooks"],
       "@ui/components/layout": ["./src/exports/ui/components/layout"],
       "@ui/components/page": ["./src/exports/ui/components/page"],
       "@ui/styles/layout": ["./src/exports/ui/styles/layout"],
-      "@ui/styles/page": ["./src/exports/ui/styles/page"],
-      "@library/hooks": ["./src/exports/library/hooks"]
+      "@ui/styles/page": ["./src/exports/ui/styles/page"]
     },
     "plugins": [
       {
