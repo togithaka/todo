@@ -1,5 +1,5 @@
-import { Page } from '@ui/components/page';
+import { Dashboard } from '@ui/components/page';
 
 export default function Landing() {
-  return <Page />;
+  return <Dashboard />;
 }
