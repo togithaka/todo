@@ -1,7 +1,7 @@
 'use client';
 
-import { useAside } from '@library/hooks';
-import { AsideProvider } from '@library/providers';
+import { useAside, useMode } from '@library/hooks';
+import { AsideProvider, ModeProvider } from '@library/providers';
 import { Aside, Header, Main } from '@ui/components/layout';
 import { HeaderStyles, MainStyles } from '@ui/styles/layout';
 import { DashboardStyles, PageStyles } from '@ui/styles/page';
@@ -16,6 +16,7 @@ interface Props {
 
 function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
   const { trigger, pullTrigger } = useAside();
+  const { mode } = useMode();
 
   return (
     <div className={trigger ? DashboardStyles.Dashboard : PageStyles.Page}>
@@ -25,7 +26,7 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
             className={DashboardStyles.Nav}
             onClick={pullTrigger}
           >
-            1234
+            {mode}
           </div>
         )}
       </Header>
@@ -37,12 +38,14 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
 
 export default function Panel({ navItems, asideItems, mainItems }: Props) {
   return (
-    <AsideProvider>
-      <Content
-        navItems={navItems}
-        asideItems={asideItems}
-        mainItems={mainItems}
-      />
-    </AsideProvider>
+    <ModeProvider>
+      <AsideProvider>
+        <Content
+          navItems={navItems}
+          asideItems={asideItems}
+          mainItems={mainItems}
+        />
+      </AsideProvider>
+    </ModeProvider>
   );
 }
