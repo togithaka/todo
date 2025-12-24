@@ -24,7 +24,9 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
           <div
             className={DashboardStyles.Nav}
             onClick={pullTrigger}
-          ></div>
+          >
+            1234
+          </div>
         )}
       </Header>
       <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}></Main>
