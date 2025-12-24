@@ -18,8 +18,8 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
   const { trigger, pullTrigger } = useAside();
 
   return (
-    <div className={trigger ? DashboardStyles.Panel : PageStyles.View}>
-      <Header className={trigger ? HeaderStyles.Panel : HeaderStyles.View}>
+    <div className={trigger ? DashboardStyles.Dashboard : PageStyles.Page}>
+      <Header className={trigger ? HeaderStyles.Dashboard : HeaderStyles.Page}>
         {!trigger && (
           <div
             className={DashboardStyles.Nav}
@@ -27,7 +27,7 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
           ></div>
         )}
       </Header>
-      <Main className={trigger ? MainStyles.Panel : MainStyles.View}></Main>
+      <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}></Main>
       {trigger && <Aside></Aside>}
     </div>
   );
