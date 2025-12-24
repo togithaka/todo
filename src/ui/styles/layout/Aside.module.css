@@ -96,7 +96,7 @@
   .Aside {
     position: fixed;
     z-index: 999;
-    min-width: calc(100dvh - 1px);
+    min-width: calc(100dvw - 1px);
   }
 }
 
@@ -143,6 +143,6 @@
 
 @media (min-width: 2304px) {
   .Container {
-    padding-inline-start: calc(128px + (100dvh - 2304px) / 2);
+    padding-inline-start: calc(128px + (100dvw - 2304px) / 2);
   }
 }
