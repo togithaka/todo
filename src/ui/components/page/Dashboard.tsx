@@ -6,6 +6,7 @@ import { Aside, Header, Main } from '@ui/components/layout';
 import { HeaderStyles, MainStyles } from '@ui/styles/layout';
 import { DashboardStyles, PageStyles } from '@ui/styles/page';
 import { ReactNode } from 'react';
+import Icon from '../shared/Icon';
 
 interface Props {
   navItems?: ReactNode;
@@ -24,7 +25,13 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
           <div
             className={DashboardStyles.Nav}
             onClick={pullTrigger}
-          ></div>
+          >
+            <Icon
+              name='aside'
+              alt='Aside Icon'
+              size={16}
+            />
+          </div>
         )}
       </Header>
       <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}></Main>
