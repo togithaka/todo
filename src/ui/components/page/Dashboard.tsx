@@ -7,6 +7,7 @@ import { HeaderStyles, MainStyles } from '@ui/styles/layout';
 import { DashboardStyles, PageStyles } from '@ui/styles/page';
 import { ReactNode } from 'react';
 import Icon from '../shared/Icon';
+import Dialog from './Dialog';
 
 interface Props {
   navItems?: ReactNode;
@@ -33,8 +34,11 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
             />
           </div>
         )}
+        <Dialog>1234</Dialog>
       </Header>
-      <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}></Main>
+      <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}>
+        {mainItems}
+      </Main>
       {trigger && <Aside></Aside>}
     </div>
   );
