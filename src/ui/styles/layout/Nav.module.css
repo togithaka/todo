@@ -34,7 +34,7 @@
     gap: 56px;
     overflow-y: auto;
     background-color: var(--color-accent);
-    min-height: calc(100vh - 56px - 56px - 56px - 1px);
+    min-height: calc(100dvh - 56px - 56px - 56px - 1px);
     backdrop-filter: blur(16px);
   }
 }
