@@ -1,8 +1,8 @@
-.Dialog {
+.Modal {
   z-index: 999999999999999;
 }
 
-.DialogItself {
+.ModalItself {
   position: absolute;
   top: 0px;
   left: 0px;

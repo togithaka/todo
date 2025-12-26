@@ -7,7 +7,7 @@ import { HeaderStyles, MainStyles } from '@ui/styles/layout';
 import { DashboardStyles, PageStyles } from '@ui/styles/page';
 import { ReactNode } from 'react';
 import Icon from '../shared/Icon';
-import Dialog from './Dialog';
+import Modal from './Modal';
 
 interface Props {
   navItems?: ReactNode;
@@ -34,7 +34,7 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
             />
           </div>
         )}
-        <Dialog>1234</Dialog>
+        <Modal>1234</Modal>
       </Header>
       <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}>
         {mainItems}

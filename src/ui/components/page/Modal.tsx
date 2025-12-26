@@ -4,14 +4,14 @@ import { useAside, useTrigger } from '@library/hooks';
 import { Header, Main } from '@ui/components/layout';
 import { Icon } from '@ui/components/shared';
 import { HeaderStyles, MainStyles } from '@ui/styles/layout';
-import { DialogStyles, PageStyles } from '@ui/styles/page';
+import { ModalStyles, PageStyles } from '@ui/styles/page';
 import { ReactNode, useEffect } from 'react';
 
 interface Props {
   children?: ReactNode;
 }
 
-export default function Dialog({ children }: Props) {
+export default function Modal({ children }: Props) {
   const { trigger, pullTrigger } = useTrigger();
 
   const { setHidden } = useAside();
@@ -22,30 +22,30 @@ export default function Dialog({ children }: Props) {
   }, [trigger, setHidden]);
 
   return (
-    <div className={DialogStyles.Dialog}>
+    <div className={ModalStyles.Modal}>
       <div
-        className={DialogStyles.TriggerOff}
+        className={ModalStyles.TriggerOff}
         onClick={() => pullTrigger()}
       >
         <Icon
-          name='dialog'
-          alt='Dialog Icon'
+          name='modal'
+          alt='Modal Icon'
           size={16}
           inverted
         />
       </div>
       {trigger && (
-        <div className={DialogStyles.DialogItself}>
+        <div className={ModalStyles.ModalItself}>
           <div className={PageStyles.Page}>
             <Header className={HeaderStyles.Page}>
-              <div className={DialogStyles.Nav}></div>
+              <div className={ModalStyles.Nav}></div>
               <div
-                className={DialogStyles.TriggerOn}
+                className={ModalStyles.TriggerOn}
                 onClick={() => pullTrigger()}
               >
                 <Icon
-                  name='dialog'
-                  alt='Dialog Icon'
+                  name='modal'
+                  alt='Modal Icon'
                   size={16}
                 />
               </div>
