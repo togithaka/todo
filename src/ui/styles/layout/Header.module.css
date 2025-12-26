@@ -74,11 +74,11 @@
 
 @media (min-width: 2304px) {
   .Dashboard {
-    padding-inline-end: calc(128px + (100vw - 2304px) / 2);
+    padding-inline-end: calc(128px + (100dvw - 2304px) / 2);
     padding-inline-start: 16px;
   }
 
   .Page {
-    padding-inline: calc(128px + (100vw - 2304px) / 2);
+    padding-inline: calc(128px + (100dvw - 2304px) / 2);
   }
 }
