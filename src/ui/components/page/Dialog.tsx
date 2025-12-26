@@ -28,7 +28,7 @@ export default function Dialog({ children }: Props) {
   }, [trigger]);
 
   return (
-    <dialog className={DialogStyles.Dialog}>
+    <div className={DialogStyles.Dialog}>
       <div
         className={DialogStyles.TriggerOff}
         onClick={() => pullTrigger()}
@@ -60,6 +60,6 @@ export default function Dialog({ children }: Props) {
           </div>
         </div>
       )}
-    </dialog>
+    </div>
   );
 }
