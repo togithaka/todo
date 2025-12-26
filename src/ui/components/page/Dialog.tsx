@@ -42,8 +42,8 @@ export default function Dialog({ children }: Props) {
       </div>
       {trigger && (
         <div className={DialogStyles.DialogItself}>
-          <div className={PageStyles.View}>
-            <Header className={HeaderStyles.View}>
+          <div className={PageStyles.Page}>
+            <Header className={HeaderStyles.Page}>
               <div className={DialogStyles.Nav}></div>
               <div
                 className={DialogStyles.TriggerOn}
