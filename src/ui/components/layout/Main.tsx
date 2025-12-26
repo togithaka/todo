@@ -1,3 +1,4 @@
+import { Container, Footer } from '@ui/components/layout';
 import { MainStyles } from '@ui/styles/layout';
 import { ReactNode } from 'react';
 
@@ -8,6 +9,9 @@ interface Props {
 
 export default function Main({ className, children }: Props) {
   return (
-    <main className={[MainStyles.Main, className].join(' ')}>{children}</main>
+    <main className={[MainStyles.Main, className].join(' ')}>
+      <Container>{children}</Container>
+      <Footer />
+    </main>
   );
 }
