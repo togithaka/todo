@@ -1,6 +1,6 @@
 import { AsideContext } from '@library/contexts';
 import { useTrigger } from '@library/hooks';
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -8,9 +8,10 @@ interface Props {
 
 export default function AsideProvider({ children }: Props) {
   const { trigger, pullTrigger } = useTrigger();
+  const [hidden, setHidden] = useState(false);
 
   return (
-    <AsideContext.Provider value={{ trigger, pullTrigger }}>
+    <AsideContext.Provider value={{ trigger, pullTrigger, hidden, setHidden }}>
       {children}
     </AsideContext.Provider>
   );
