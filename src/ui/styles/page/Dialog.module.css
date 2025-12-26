@@ -1,0 +1,30 @@
+.Dialog {
+  z-index: 999999999999999;
+}
+
+.DialogItself {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-background);
+}
+
+.TriggerOff,
+.TriggerOn {
+  background-color: var(--color-foreground);
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+.TriggerOn {
+  background-color: var(--color-background);
+  outline: 1px solid var(--color-highlight);
+}
+
+.Nav {
+  flex-grow: 1;
+}
