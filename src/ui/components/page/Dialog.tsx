@@ -1,6 +1,6 @@
 'use client';
 
-import { useTrigger } from '@library/hooks';
+import { useAside, useTrigger } from '@library/hooks';
 import { Header, Main } from '@ui/components/layout';
 import { Icon } from '@ui/components/shared';
 import { HeaderStyles, MainStyles } from '@ui/styles/layout';
@@ -14,18 +14,12 @@ interface Props {
 export default function Dialog({ children }: Props) {
   const { trigger, pullTrigger } = useTrigger();
 
+  const { setHidden } = useAside();
+
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const aside = window.document.querySelector('aside');
-    if (!aside) return;
-
-    if (trigger) {
-      aside.setAttribute('style', 'display: none');
-    } else {
-      aside.removeAttribute('style');
-    }
-  }, [trigger]);
+    setHidden(trigger);
+    return () => setHidden(false);
+  }, [trigger, setHidden]);
 
   return (
     <div className={DialogStyles.Dialog}>
