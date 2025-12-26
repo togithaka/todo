@@ -34,7 +34,7 @@ export default function Dialog({ children }: Props) {
         onClick={() => pullTrigger()}
       >
         <Icon
-          name='Dialog'
+          name='dialog'
           alt='Dialog Icon'
           size={16}
           inverted
@@ -50,7 +50,7 @@ export default function Dialog({ children }: Props) {
                 onClick={() => pullTrigger()}
               >
                 <Icon
-                  name='Dialog'
+                  name='dialog'
                   alt='Dialog Icon'
                   size={16}
                 />
