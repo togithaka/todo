@@ -1,4 +1,4 @@
-import { SectionStyles } from '@styles/layout';
+import { SectionStyles } from '@ui/styles/layout';
 import { ReactNode } from 'react';
 
 interface Props {

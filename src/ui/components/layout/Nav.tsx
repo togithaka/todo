@@ -1,8 +1,8 @@
 'use client';
 
-import { Icon, Theme } from '@components/shared';
 import { useTrigger } from '@library/hooks';
-import { NavStyles } from '@styles/layout';
+import { Icon, Theme } from '@ui/components/shared';
+import { NavStyles } from '@ui/styles/layout';
 import { ReactNode } from 'react';
 
 interface Props {

@@ -1,4 +1,4 @@
-import { ContainerStyles } from '@styles/layout';
+import { ContainerStyles } from '@ui/styles/layout';
 import { ReactNode } from 'react';
 
 interface Props {
