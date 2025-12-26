@@ -17,7 +17,7 @@ interface Props {
 }
 
 function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
-  const { trigger, pullTrigger } = useAside();
+  const { trigger, pullTrigger, hidden } = useAside();
 
   return (
     <div className={trigger ? DashboardStyles.Dashboard : PageStyles.Page}>
@@ -39,7 +39,7 @@ function Content({ navItems, asideItems, mainItems, screenItems }: Props) {
       <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}>
         {mainItems}
       </Main>
-      {trigger && <Aside></Aside>}
+      {trigger && !hidden && <Aside></Aside>}
     </div>
   );
 }
