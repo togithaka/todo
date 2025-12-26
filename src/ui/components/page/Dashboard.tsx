@@ -2,7 +2,7 @@
 
 import { useAside } from '@library/hooks';
 import { AsideProvider, ModeProvider, ThemeProvider } from '@library/providers';
-import { Aside, Header, Main } from '@ui/components/layout';
+import { Aside, Header, Main, Nav } from '@ui/components/layout';
 import { Modal } from '@ui/components/page';
 import { Icon } from '@ui/components/shared';
 import { HeaderStyles, MainStyles } from '@ui/styles/layout';
@@ -11,12 +11,11 @@ import { ReactNode } from 'react';
 
 interface Props {
   navItems?: ReactNode;
-  asideItems?: ReactNode;
   mainItems?: ReactNode;
   modalItems?: ReactNode;
 }
 
-function Content({ navItems, asideItems, mainItems, modalItems }: Props) {
+function Content({ navItems, mainItems, modalItems }: Props) {
   const { trigger, pullTrigger, hidden } = useAside();
 
   return (
@@ -34,6 +33,7 @@ function Content({ navItems, asideItems, mainItems, modalItems }: Props) {
             />
           </div>
         )}
+        <Nav>{navItems}</Nav>
         <Modal>{modalItems}</Modal>
       </Header>
       <Main className={trigger ? MainStyles.Dashboard : MainStyles.Page}>
@@ -44,15 +44,15 @@ function Content({ navItems, asideItems, mainItems, modalItems }: Props) {
   );
 }
 
-export default function Panel({ navItems, asideItems, mainItems }: Props) {
+export default function Panel({ navItems, modalItems, mainItems }: Props) {
   return (
     <ModeProvider>
       <ThemeProvider>
         <AsideProvider>
           <Content
             navItems={navItems}
-            asideItems={asideItems}
             mainItems={mainItems}
+            modalItems={modalItems}
           />
         </AsideProvider>
       </ThemeProvider>
