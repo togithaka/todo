@@ -1,7 +1,7 @@
 'use client';
 
 import { useAside } from '@library/hooks';
-import { Icon } from '@ui/components/shared';
+import { Brand, Icon } from '@ui/components/shared';
 import { AsideStyles } from '@ui/styles/layout';
 
 export default function Aside() {
@@ -11,6 +11,7 @@ export default function Aside() {
     <aside className={AsideStyles.Aside}>
       <div className={AsideStyles.Container}>
         <div className={AsideStyles.Head}>
+          <Brand />
           <div
             className={AsideStyles.Nav}
             onClick={pullTrigger}
