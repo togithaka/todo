@@ -11,17 +11,19 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
+      "@fonts/static": ["./src/exports/fonts/static"],
+      "@fonts/variable": ["./src/exports/fonts/variable"],
       "@library/contexts": ["./src/exports/library/contexts"],
       "@library/hooks": ["./src/exports/library/hooks"],
       "@library/providers": ["./src/exports/library/providers"],
+      "@ui/components/handler": ["./src/exports/ui/components/handler"],
       "@ui/components/layout": ["./src/exports/ui/components/layout"],
       "@ui/components/page": ["./src/exports/ui/components/page"],
       "@ui/components/shared": ["./src/exports/ui/components/shared"],
+      "@ui/styles/handler": ["./src/exports/ui/styles/handler"],
       "@ui/styles/layout": ["./src/exports/ui/styles/layout"],
       "@ui/styles/page": ["./src/exports/ui/styles/page"],
-      "@ui/styles/shared": ["./src/exports/ui/styles/shared"],
-      "@fonts/static": ["./src/exports/fonts/static"],
-      "@fonts/variable": ["./src/exports/fonts/variable"]
+      "@ui/styles/shared": ["./src/exports/ui/styles/shared"]
     },
     "plugins": [
       {
