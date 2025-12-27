@@ -1,29 +1,26 @@
 import NavItem from '@/ui/components/shared/NavItem';
 import Theme from '@/ui/components/shared/Theme';
+import Authentication from '@/ui/components/view/Authentication';
 import { Page } from '@ui/components/page';
 
-export default function Landing() {
+export default function Recover() {
   return (
     <Page
       navItems={
         <>
           <NavItem
-            name='Landing'
-            href='/'
+            name='Recover'
+            href='/site/private/authentication/recover'
             active
           />
           <NavItem
-            name='Info'
-            href='/'
-          />
-          <NavItem
             button={true}
-            name='Account'
-            href='/site/public/authentication/login'
+            name='Landing'
+            href='/'
           />
         </>
       }
-      mainItems={null}
+      mainItems={<Authentication type='recover' />}
       modalItems={<Theme />}
     />
   );
