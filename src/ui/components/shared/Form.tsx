@@ -1,5 +1,5 @@
-import { Icon } from '@components/shared';
-import { FormStyles } from '@styles/shared';
+import { Icon } from '@ui/components/shared';
+import { FormStyles } from '@ui/styles/shared';
 import { ReactNode } from 'react';
 
 interface Props {
