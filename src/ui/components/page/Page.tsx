@@ -1,6 +1,6 @@
 'use client';
 
-import { ModeProvider, ThemeProvider } from '@library/providers';
+import { AsideProvider, ModeProvider, ThemeProvider } from '@library/providers';
 import { Header, Main, Nav } from '@ui/components/layout';
 import { Modal } from '@ui/components/page';
 import { Brand } from '@ui/components/shared';
@@ -17,16 +17,18 @@ interface Props {
 export default function Page({ navItems, mainItems, modalItems }: Props) {
   return (
     <ModeProvider>
-      <ThemeProvider>
-        <div className={PageStyles.Page}>
-          <Header className={HeaderStyles.Page}>
-            <Brand />
-            <Nav>{navItems}</Nav>
-            <Modal>{modalItems}</Modal>
-          </Header>
-          <Main className={MainStyles.Page}>{mainItems}</Main>
-        </div>
-      </ThemeProvider>
+      <AsideProvider>
+        <ThemeProvider>
+          <div className={PageStyles.Page}>
+            <Header className={HeaderStyles.Page}>
+              <Brand />
+              <Nav>{navItems}</Nav>
+              <Modal>{modalItems}</Modal>
+            </Header>
+            <Main className={MainStyles.Page}>{mainItems}</Main>
+          </div>
+        </ThemeProvider>
+      </AsideProvider>
     </ModeProvider>
   );
 }
