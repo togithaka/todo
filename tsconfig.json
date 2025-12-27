@@ -20,10 +20,12 @@
       "@ui/components/layout": ["./src/exports/ui/components/layout"],
       "@ui/components/page": ["./src/exports/ui/components/page"],
       "@ui/components/shared": ["./src/exports/ui/components/shared"],
+      "@ui/components/view": ["./src/exports/ui/components/view"],
       "@ui/styles/handler": ["./src/exports/ui/styles/handler"],
       "@ui/styles/layout": ["./src/exports/ui/styles/layout"],
       "@ui/styles/page": ["./src/exports/ui/styles/page"],
-      "@ui/styles/shared": ["./src/exports/ui/styles/shared"]
+      "@ui/styles/shared": ["./src/exports/ui/styles/shared"],
+      "@ui/styles/view": ["./src/exports/ui/styles/view"]
     },
     "plugins": [
       {
