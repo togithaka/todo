@@ -1,4 +1,4 @@
-import { MessageStyles } from '@styles/shared';
+import { MessageStyles } from '@ui/styles/shared';
 import { ReactNode } from 'react';
 
 interface Props {

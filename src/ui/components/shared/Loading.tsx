@@ -1,4 +1,4 @@
-import { LoadingStyles } from '@styles/shared';
+import { LoadingStyles } from '@ui/styles/shared';
 
 export default function Loading() {
   return (

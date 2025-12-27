@@ -1,5 +1,5 @@
-import { Message } from '@components/shared';
-import { InputStyles } from '@styles/shared';
+import { Message } from '@ui/components/shared';
+import { InputStyles } from '@ui/styles/shared';
 import { InputHTMLAttributes } from 'react';
 
 interface Props {
