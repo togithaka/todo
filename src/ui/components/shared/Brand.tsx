@@ -1,8 +1,9 @@
 import { Icon } from '@ui/components/shared';
+import { BrandStyles } from '@ui/styles/shared';
 
 export default function Brand() {
   return (
-    <div>
+    <div className={BrandStyles.Brand}>
       <Icon
         name='logo'
         alt='Todo'
