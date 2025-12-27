@@ -1,0 +1,9 @@
+.Page {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 56px 1fr;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

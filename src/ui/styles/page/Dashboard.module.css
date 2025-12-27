@@ -1,0 +1,39 @@
+.Dashboard {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .Dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 1fr;
+    position: relative;
+  }
+
+  .Nav {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .Dashboard {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 56px 1fr;
+  }
+}
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.Icon {
+  rotate: 180deg;
+}
