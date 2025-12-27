@@ -1,12 +1,29 @@
-import { Header, Main } from '@ui/components/layout';
+'use client';
+
+import { ModeProvider, ThemeProvider } from '@library/providers';
+import { Header, Main, Nav } from '@ui/components/layout';
+import { Brand } from '@ui/components/shared';
 import { HeaderStyles, MainStyles } from '@ui/styles/layout';
 import { PageStyles } from '@ui/styles/page';
+import { ReactNode } from 'react';
 
-export default function Page() {
+interface Props {
+  navItems: ReactNode;
+  mainItems: ReactNode;
+}
+
+export default function Page({ navItems, mainItems }: Props) {
   return (
-    <div className={PageStyles.Page}>
-      <Header className={HeaderStyles.Page} />
-      <Main className={MainStyles.Page} />
-    </div>
+    <ModeProvider>
+      <ThemeProvider>
+        <div className={PageStyles.Page}>
+          <Header className={HeaderStyles.Page}>
+            <Brand />
+            <Nav>{navItems}</Nav>
+          </Header>
+          <Main className={MainStyles.Page}>{mainItems}</Main>
+        </div>
+      </ThemeProvider>
+    </ModeProvider>
   );
 }
