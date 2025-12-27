@@ -1,4 +1,5 @@
 import NavItem from '@/ui/components/shared/NavItem';
+import Theme from '@/ui/components/shared/Theme';
 import { Page } from '@ui/components/page';
 
 export default function Landing() {
@@ -23,6 +24,7 @@ export default function Landing() {
         </>
       }
       mainItems={null}
+      modalItems={<Theme />}
     />
   );
 }
