@@ -1,0 +1,11 @@
+.Message {
+  background-color: var(--color-accent);
+  width: calc(100% - 32px);
+  padding: 16px;
+  border-radius: 16px;
+  color: var(--foreground-color);
+  font-size: 16px;
+  border: 1px solid var(--color-highlight);
+  max-width: 256px;
+  word-break: keep-all;
+}
