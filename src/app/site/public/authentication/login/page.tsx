@@ -3,7 +3,7 @@ import Theme from '@/ui/components/shared/Theme';
 import Authentication from '@/ui/components/view/Authentication';
 import { Page } from '@ui/components/page';
 
-export default function Landing() {
+export default function Login() {
   return (
     <Page
       navItems={
