@@ -9,8 +9,17 @@ interface Props {
 }
 
 export default function ThemeProvider({ children }: Props) {
-  const [theme, setTheme] = useState<Theme>('system');
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('theme-preference') as Theme) || 'system';
+    }
+    return 'system';
+  });
   const { mode } = useMode();
+
+  useEffect(() => {
+    localStorage.setItem('theme-preference', theme);
+  }, [theme]);
 
   const triggerTheme = () => {
     let newTheme: Theme;
