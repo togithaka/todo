@@ -1,0 +1,10 @@
+.Container {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  padding-block: 56px;
+  gap: 56px;
+  overflow-x: hidden;
+}
