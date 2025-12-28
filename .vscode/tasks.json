@@ -1,8 +1,8 @@
 {
   "options": {
     "env": {
-      "COMMITS_LOG_PATH": ".todo/commits.log",
-      "DIFF_LOG_PATH": ".todo/diff.log"
+      "COMMITS_LOG_PATH": ".todo/tmp/commits.log",
+      "DIFF_LOG_PATH": ".todo/tmp/diff.log"
     }
   },
   "tasks": [

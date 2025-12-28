@@ -1,5 +1,10 @@
 export { default as useAside } from '@/library/hooks/useAside';
 export { default as useIcon } from '@/library/hooks/useIcon';
+export { default as useLogin } from '@/library/hooks/useLogin';
 export { default as useMode } from '@/library/hooks/useMode';
+export { default as useOtp } from '@/library/hooks/useOtp';
+export { default as useRecover } from '@/library/hooks/useRecover';
+export { default as useRegister } from '@/library/hooks/useRegister';
+export { default as useReset } from '@/library/hooks/useReset';
 export { default as useTheme } from '@/library/hooks/useTheme';
 export { default as useTrigger } from '@/library/hooks/useTrigger';

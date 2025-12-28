@@ -1,0 +1,1 @@
+CREATE TYPE USER_SEX AS ENUM('male', 'female');

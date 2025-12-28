@@ -41,5 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # todo
-.todo/diff.log
-.todo/commits.log
+.todo/tmp
