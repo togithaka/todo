@@ -1,0 +1,1 @@
+CREATE TYPE USER_ROLE AS ENUM('superuser', 'user');
